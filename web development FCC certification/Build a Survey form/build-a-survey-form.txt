@@ -1,0 +1,190 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the plataform</p>
+    <form id="survey-form" action="/">  
+      <fieldset id="profile-information">      
+        <label id="name-label" for="name"> Name
+          <input id ="name" class="input-area" type="text" placeholder="Enter your name" required>
+        </label>
+        
+        <label id="email-label" for="email"> Email
+          <input id="email" class="input-area" type="email" placeholder="Enter your Email" required>
+        </label>    
+        <label id="number-label" for="number"> Age (<small>optional</small>)
+          <input id="number" class="input-area" type="number" min="17" max="120" placeholder="Age">
+        </label>
+        <label for="dropdown">Which option best describes your current role?
+          <select id="dropdown" class="input-area">
+            <option disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="full time job">Full time Job</option>
+            <option value="full time learner">Full time Learner</option>
+            <option value="prefer not say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset id="freeCodeCamp-rate">Would you recommend freeCodeCamp to a friend?     
+        <label for="">
+          <input type="radio" id="definitelyChoice" name="rateChoice" value="1" checked/> Definitely
+        </label>
+        <label for="">
+          <input type="radio" id="maybeChoice" name="rateChoice" value="2"/> Maybe
+        </label>
+        <label for="">
+          <input type="radio" id="notSureChoice" name="rateChoice" value="3"/> Not Sure
+        </label>
+        <label for="dropdown2">What is your favorite feature of freeCodeCamp?
+          <select id="dropdown2" class="input-area">
+            <option selected disabled>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open source">Open Source</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset id="fcc-interest"> What you like to see improved? <small>(Check all that apply)</small>
+        <label for="front-end-projects">
+        <input type="checkbox" name="fcc-interest" id="front-end-projects" value="front-end"/> Front-end Projects
+        </label>
+        <label for="back-end-projects"> 
+        <input type="checkbox" name="fcc-interest" id="back-end-projects" value="back-end"/> Back-end Projects
+        </label>
+        <label for="data-visualization">
+        <input type="checkbox" name="fcc-interest" id="data-visualization" value="data-Visualization"/> Data Visualization
+        </label>
+        <label for="challenges">
+        <input type="checkbox" name="fcc-interest" id="challenges" value="challenges"/> Challenges
+        </label>
+        <label for="open-source">
+        <input type="checkbox" name="fcc-interest" id="open-source" value="open-source"/> Open Source Community
+        </label>
+        <label for="gitter-hel">
+        <input type="checkbox" name="fcc-interest" id="gitter-help" value="gitter-help"/> Gitter Help Rooms
+        </label>
+        <label for="Videos">
+        <input type="checkbox" name="fcc-interest" id="Videos" value="videos"/> Videos
+        </label>
+        <label for="city-meetups">
+        <input type="checkbox" name="fcc-interest" id="city-meetups" value="city-meetups"/> City Meetups
+        </label>
+        <label for="wiki">
+        <input type="checkbox" name="fcc-interest" id="wiki" value="wiki"/> Wiki
+        </label>
+        <label for="forum">
+        <input type="checkbox" name="fcc-interest" id="forum" value="forum"/> Forum
+        </label>
+        <label for="additional">
+        <input type="checkbox" name="fcc-interest" id="additional" value="additional-courses"/> Additional Courses
+        </label>
+        </fieldset>
+      <fieldset id="sugestions">
+        <label for="comments">Any comments or suggestions?
+          <textarea id="comments" placeholder="Enter Your comment here..." rows="5"></textarea>
+        </label>
+      </fieldset>    
+      <input type="submit" value="Submit" id="submit"/>  
+    </form> 
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
+
+
+/* GENERAL */
+
+body{
+  width:100vw;
+  margin: 0px;
+  padding-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #f3f3f3;
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+form, fieldtest, label, select, .input-area, textarea {
+ margin: 0px;
+ padding: 0px;
+}
+
+h1, p {
+  margin: 0px auto;
+  text-align: center;
+}
+
+p {
+  font-weight: 200;
+  font-style: italic;
+  margin-bottom: 1.75rem;
+}
+
+/* FORMS */
+
+form {
+  margin: 0px auto;
+  width: 80vw;
+  max-width: 35rem;
+  padding: 1.25rem 0.875rem; 
+  background-color: rgba(27, 27, 50, 0.8);
+  border-style: transparent;
+  border-radius: 5px;
+}
+
+fieldset {
+  border-style: none;
+}
+
+label, select, .input-area, textarea, input[type="submit"] {
+  display: block;
+  width: 100%;
+}
+
+label {
+  padding-bottom: 0.5rem;
+}
+
+.input-area, textarea {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  color: #495057;
+  border-radius: 4px;
+  border-style: none;
+}
+
+::placeholder {
+  color: #495057;
+} 
+
+#submit {
+  width: 95%;
+  margin: auto;
+  font-family: 'Poppins';
+  color: #f3f3f3;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  background-color: #37af65;
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+}
+
+** end of undefined **
+
